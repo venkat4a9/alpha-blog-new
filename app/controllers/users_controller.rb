@@ -1,70 +1,89 @@
 class UsersController < ApplicationController
 
+before_action :set_user, only: [:edit, :update, :show]
 
-	def index
+before_action :require_same_user, only: [:edit, :update]
 
-		@users = User.paginate(page: params[:page], per_page: 5)
+def index
 
-	end
+@users = User.paginate(page: params[:page], per_page: 5)
 
+end
 
-	def new
+def new
 
-		@user = User.new
+@user = User.new
 
-	end
+end
 
-	def create
+def create
 
-			@user = User.new(user_params)
+@user = User.new(user_params)
 
-		if @user.save
+if @user.save
 
-			flash[:success] = "Welcome to the CGMEETUP #{@user.username}"
+flash[:success] = "Welcome to the alpha blog #{@user.username}"
 
-			redirect_to articles_path
+redirect_to articles_path
 
-		else
+else
 
-			render 'new'
+render 'new'
 
-		end
+end
 
-	end
+end
 
-	def edit
-			@user = User.find(params[:id])
-	end
+def edit
 
-	def update
-			@user = User.find(params[:id])
+end
 
-		if @user.update(user_params)
+def update
 
-			flash[:success] = "Your account was updated successfully"
+if @user.update(user_params)
 
-			redirect_to articles_path
+flash[:success] = "Your account was updated successfully"
 
-		else
+redirect_to articles_path
 
-			render 'edit'
+else
 
-		end
-	end
+render 'edit'
 
-	def show
+end
 
-			@user = User.find(params[:id])
+end
 
-			@user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
-	end
+def show
 
-	private
+@user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
 
-	def user_params
+end
 
-			params.require(:user).permit(:username, :email, :password)
+private
 
-	end
+def user_params
+
+params.require(:user).permit(:username, :email, :password)
+
+end
+
+def set_user
+
+@user = User.find(params[:id])
+
+end
+
+def require_same_user
+
+if current_user != @user
+
+flash[:danger] = "You can only edit your own account"
+
+redirect_to root_path
+
+end
+
+end
 
 end

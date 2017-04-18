@@ -14464,3 +14464,554 @@ Processing by ArticlesController#index as HTML
   Rendered layouts/_messages.html.erb (0.1ms)
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-18 18:11:24 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 27ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:11:24 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered articles/_article.html.erb (27.3ms)
+  Rendered articles/index.html.erb within layouts/application (32.1ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 382ms (Views: 376.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-18 18:11:26 +0530
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:11:26 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered articles/_article.html.erb (4.1ms)
+  Rendered articles/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 44.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-18 18:11:27 +0530
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:11:27 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered articles/_article.html.erb (4.4ms)
+  Rendered articles/index.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-18 18:11:29 +0530
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:11:29 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.4ms)[0m  [1mSELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered articles/_article.html.erb (6.0ms)
+  Rendered articles/index.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-18 18:11:29 +0530
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:11:29 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered articles/_article.html.erb (7.1ms)
+  Rendered articles/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 66ms (Views: 65.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-18 18:11:30 +0530
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:11:30 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered articles/_article.html.erb (4.5ms)
+  Rendered articles/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:11:34 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.3ms)[0m  [1mSELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered articles/_article.html.erb (5.9ms)
+  Rendered articles/index.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 56.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-04-18 18:11:35 +0530
+Processing by UsersController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (16.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-18 18:11:37 +0530
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:11:37 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered articles/_article.html.erb (4.1ms)
+  Rendered articles/index.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:11:39 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered articles/_article.html.erb (8.4ms)
+  Rendered articles/index.html.erb within layouts/application (10.3ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 65ms (Views: 63.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-04-18 18:11:39 +0530
+Processing by UsersController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" LIMIT 5 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 4]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (16.5ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 64.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-18 18:11:41 +0530
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:11:41 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered articles/_article.html.erb (4.1ms)
+  Rendered articles/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-18 18:11:45 +0530
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:11:45 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered articles/_article.html.erb (5.2ms)
+  Rendered articles/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 57ms (Views: 54.9ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-04-18 18:11:47 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"boPVdhsvVByJEStNbSl8/Tz7pUlgW6SbLrE7MkOWOga/heyoZiCBEtUwjRtIKaI35JjAX/TnYaYuz6f+kSXcmQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-18 18:11:47 +0530
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-18 18:11:50 +0530
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2017-04-18 18:11:55 +0530
+Processing by UsersController#new as HTML
+  Rendered shared/_errors.html.erb (2.3ms)
+  Rendered users/_form.html (13.9ms)
+  Rendered users/new.html.erb within layouts/application (15.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-04-18 18:12:00 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 62ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:12:03 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (2.0ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered articles/_article.html.erb (7.8ms)
+  Rendered articles/index.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 60.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-04-18 18:12:07 +0530
+Processing by UsersController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 3]]
+  [1m[36m (0.0ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 51.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-04-18 18:12:12 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 55.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-04-18 18:12:16 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eC/OxPwknxi36PZMyEpP2fYFpYtVRrglJy+jVMN3YaSpKfcagStKFuvJUBrtSpETLmbAncH6fRgnUT+YEcSHOw==", "session"=>{"email"=>"ajit@cgm.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "ajit@cgm.com"]]
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 70ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2017-04-18 18:12:16 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? LIMIT 5 OFFSET 0  [["user_id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered articles/_article.html.erb (1.8ms)
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 56.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2017-04-18 18:12:32 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_same_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-18 18:12:32 +0530
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:12:32 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered articles/_article.html.erb (7.2ms)
+  Rendered articles/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 52ms (Views: 50.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2017-04-18 18:12:40 +0530
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered articles/_form.html.erb (4.8ms)
+  Rendered articles/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-18 18:13:23 +0530
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:13:23 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered articles/_article.html.erb (5.5ms)
+  Rendered articles/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-04-18 18:13:28 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"me9pVEDGQVM+Y5Rp0SQ1/fP25peF78pATjb0XOSVfqdI6VCKPcmUXWJCMj/0JOs3K5WDgRFTD31OSGiQNiaYOA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-18 18:13:28 +0530
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:13:43 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.3ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered articles/_article.html.erb (5.3ms)
+  Rendered articles/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 44.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-04-18 18:13:45 +0530
+Processing by UsersController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35m (0.0ms)[0m  SELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?  [["user_id", 5]]
+  Rendered users/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:13:47 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.2ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered articles/_article.html.erb (6.9ms)
+  Rendered articles/index.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:13:57 +0530
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.1ms)[0m  [1mSELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered articles/_article.html.erb (4.1ms)
+  Rendered articles/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 65ms (Views: 63.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-18 18:13:58 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered articles/_article.html.erb (7.1ms)
+  Rendered articles/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-04-18 18:14:51 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)

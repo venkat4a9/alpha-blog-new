@@ -1,35 +1,55 @@
 class UsersController < ApplicationController
 
-def new
+	def new
 
-@user = User.new
+		@user = User.new
 
-end
+	end
 
-def create
+	def create
 
-@user = User.new(user_params)
+			@user = User.new(user_params)
 
-if @user.save
+		if @user.save
 
-flash[:success] = "Welcome to the CGMEETUP #{@user.username}"
+			flash[:success] = "Welcome to the CGMEETUP #{@user.username}"
 
-redirect_to articles_path
+			redirect_to articles_path
 
-else
+		else
 
-render 'new'
+			render 'new'
 
-end
+		end
 
-end
+	end
 
-private
+	def edit
+			@user = User.find(params[:id])
+	end
 
-def user_params
+	def update
+		@user = User.find(params[:id])
 
-params.require(:user).permit(:username, :email, :password)
+		if @user.update(user_params)
 
-end
+			flash[:success] = "Your account was updated successfully"
+
+			redirect_to articles_path
+
+		else
+
+			render 'edit'
+
+		end
+	end
+
+	private
+
+	def user_params
+
+			params.require(:user).permit(:username, :email, :password)
+
+	end
 
 end

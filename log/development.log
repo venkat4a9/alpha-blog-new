@@ -15924,3 +15924,624 @@ Processing by UsersController#show as HTML
   Rendered layouts/_messages.html.erb (0.1ms)
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 64ms (Views: 48.3ms | ActiveRecord: 1.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateCategories (20170419064808)
+  [1m[35m (0.0ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /home/cgm/Desktop/ruby/projects/alpha-blog-new/db/migrate/20170419064808_create_categories.rb:5)
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "categories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20170419064808"]]
+  [1m[36m (91.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-19 12:44:35 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 9]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 28ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-19 12:44:35 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  Rendered articles/_article.html.erb (1.5ms)
+  Rendered articles/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 362ms (Views: 355.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-19 12:44:38 +0530
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 9]]
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2017-04-19 12:44:38 +0530
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" LIMIT 5 OFFSET 0
+  Rendered articles/_article.html.erb (0.5ms)
+  Rendered articles/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-04-19 12:44:39 +0530
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/nOumPiaQE/36yEmmj3zK4uJkFD2qxiZWhogfZnNPVYa80c4d0IU/pcNdLDppDBDjZPjwVmaYNh0LQruT4OKbA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-19 12:44:39 +0530
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-19 12:44:43 +0530
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/catagiry/new" for 127.0.0.1 at 2017-04-19 12:45:40 +0530
+
+ActionController::RoutingError (No route matches [GET] "/catagiry/new"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /home/cgm/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /home/cgm/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /home/cgm/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (38.0ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (194.7ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.9ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2017-04-19 12:46:11 +0530
+Processing by CategoriesController#new as HTML
+  Rendered shared/_errors.html.erb (3.2ms)
+  Rendered categories/new.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 65ms (Views: 59.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2017-04-19 12:46:31 +0530
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PvCWduZMD2k3IWzdmk+QXmu9gHOEJQROCZHzKjEt31PacH/WaZRb2FfHOUvp1lM2bafz4isUfA8nptm552NoaQ==", "category"=>{"name"=>"gallary"}, "commit"=>"Create Category"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = 'gallary' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "gallary"], ["created_at", "2017-04-19 07:16:31.316902"], ["updated_at", "2017-04-19 07:16:31.316902"]]
+  [1m[36m (139.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 156ms (ActiveRecord: 140.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-04-19 12:46:31 +0530
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT "categories".* FROM "categories"
+  Rendered categories/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-04-19 12:46:35 +0530
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered categories/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2017-04-19 12:57:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendered categories/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 408ms (Views: 399.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-04-19 12:57:54 +0530
+Processing by CategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "categories"
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0[0m
+  Rendered categories/index.html.erb within layouts/application (15.2ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `articles' for #<Category:0x007f2a25f8e0e8>):
+    18: 
+    19: </li>
+    20: 
+    21: <li><small><%= pluralize(category.articles.count, "article") %></small></li>
+    22: 
+    23: </div>
+    24: 
+  app/views/categories/index.html.erb:21:in `block in _app_views_categories_index_html_erb___676978564052289123_69909500767980'
+  app/views/categories/index.html.erb:7:in `_app_views_categories_index_html_erb___676978564052289123_69909500767980'
+
+
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.0ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.5ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.8ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2017-04-19 12:58:01 +0530
+Processing by CategoriesController#new as HTML
+  Rendered shared/_errors.html.erb (2.8ms)
+  Rendered categories/new.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 74ms (Views: 73.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2017-04-19 12:58:07 +0530
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m/mDFVz0lT/u8PO2BLYnS57+ac95QqGtiCrc5ghbASt/eWq10yzBjo4WpiB3L+QjmOQaXtZz2eymHfZ13hW2EQ==", "category"=>{"name"=>"sports"}, "commit"=>"Create Category"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = 'sports' LIMIT 1[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "sports"], ["created_at", "2017-04-19 07:28:07.722740"], ["updated_at", "2017-04-19 07:28:07.722740"]]
+  [1m[36m (135.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 157ms (ActiveRecord: 137.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-04-19 12:58:07 +0530
+Processing by CategoriesController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "categories"
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0[0m
+  Rendered categories/index.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `articles' for #<Category:0x007f2a25f84980>):
+    18: 
+    19: </li>
+    20: 
+    21: <li><small><%= pluralize(category.articles.count, "article") %></small></li>
+    22: 
+    23: </div>
+    24: 
+  app/views/categories/index.html.erb:21:in `block in _app_views_categories_index_html_erb___676978564052289123_69909500767980'
+  app/views/categories/index.html.erb:7:in `_app_views_categories_index_html_erb___676978564052289123_69909500767980'
+
+
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.7ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.6ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.0ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2017-04-19 13:01:19 +0530
+Processing by CategoriesController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered categories/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 50.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2017-04-19 13:01:33 +0530
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8+2kuCKoam/mp552gJJRjjVsnel6dk2+agsRIvKgMFUXbU0YrXA+3oZBy+DzC5LmM3bueNVHNf9EPDuxJO6Hbw==", "category"=>{"name"=>"games"}, "commit"=>"Create Category"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = 'games' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "games"], ["created_at", "2017-04-19 07:31:33.867081"], ["updated_at", "2017-04-19 07:31:33.867081"]]
+  [1m[36m (156.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 166ms (ActiveRecord: 157.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-04-19 13:01:34 +0530
+Processing by CategoriesController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "categories"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0[0m
+  Rendered categories/index.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `articles' for #<Category:0x007f2a26972ff0>):
+    18: 
+    19: </li>
+    20: 
+    21: <li><small><%= pluralize(category.articles.count, "article") %></small></li>
+    22: 
+    23: </div>
+    24: 
+  app/views/categories/index.html.erb:21:in `block in _app_views_categories_index_html_erb___676978564052289123_69909506767440'
+  app/views/categories/index.html.erb:7:in `_app_views_categories_index_html_erb___676978564052289123_69909506767440'
+
+
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.4ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-04-19 13:01:55 +0530
+Processing by CategoriesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "categories"
+  [1m[36mCategory Load (0.1ms)[0m  [1mSELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0[0m
+  Rendered categories/index.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `articles' for #<Category:0x007f2a26667310>):
+    18: 
+    19: </li>
+    20: 
+    21: <li><small><%= pluralize(category.articles.count, "articles") %></small></li>
+    22: 
+    23: </div>
+    24: 
+  app/views/categories/index.html.erb:21:in `block in _app_views_categories_index_html_erb___676978564052289123_69909504634900'
+  app/views/categories/index.html.erb:7:in `_app_views_categories_index_html_erb___676978564052289123_69909504634900'
+
+
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.4ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.0ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-04-19 13:02:04 +0530
+Processing by CategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "categories"
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0[0m
+  Rendered categories/index.html.erb within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `article' for #<Category:0x007f2a25b90cc0>):
+    18: 
+    19: </li>
+    20: 
+    21: <li><small><%= pluralize(category.article.count, "article") %></small></li>
+    22: 
+    23: </div>
+    24: 
+  app/views/categories/index.html.erb:21:in `block in _app_views_categories_index_html_erb___676978564052289123_69909499288160'
+  app/views/categories/index.html.erb:7:in `_app_views_categories_index_html_erb___676978564052289123_69909499288160'
+
+
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.1ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.7ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/cgm/.rvm/gems/ruby-2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (29.6ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-04-19 13:02:19 +0530
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0
+  Rendered categories/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 55.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2017-04-19 13:02:30 +0530
+Processing by CategoriesController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2017-04-19 13:02:37 +0530
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mGkXh7ZCL8n3oqG2GqZzVF+wjZM+PTigJih58TwpqsZ86f4nOZp7eJdE9CBpP7A8War+ApEMQOEIH1Ni6mcd/A==", "category"=>{"name"=>"chess"}, "commit"=>"Create Category"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.3ms)[0m  SELECT  1 AS one FROM "categories" WHERE "categories"."name" = 'chess' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "chess"], ["created_at", "2017-04-19 07:32:37.447319"], ["updated_at", "2017-04-19 07:32:37.447319"]]
+  [1m[35m (167.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 173ms (ActiveRecord: 168.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-04-19 13:02:37 +0530
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0[0m
+  Rendered categories/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2017-04-19 13:03:12 +0530
+Processing by CategoriesController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2017-04-19 13:03:25 +0530
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XbOnDcM3L8YjBsu0XeCZwGLNOuZcstnv6gk9ufa3y/a5M06tTO97d0PgniIueVqoZNdJd/ODoa7EPhcqIPl8zA==", "category"=>{"name"=>"Books"}, "commit"=>"Create Category"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = 'Books' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Books"], ["created_at", "2017-04-19 07:33:25.273660"], ["updated_at", "2017-04-19 07:33:25.273660"]]
+  [1m[36m (207.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 212ms (ActiveRecord: 207.8ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-04-19 13:03:25 +0530
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2017-04-19 13:03:33 +0530
+Processing by CategoriesController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered categories/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2017-04-19 13:03:45 +0530
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yOzTCQgqhSyewOyaMlOEuHwcwx2wuz6lvKXbLE0GqsosbDqph/LRnf4muQxBykfQegawjB+KRuSSkvG/m0gd8A==", "category"=>{"name"=>"Lifestyle"}, "commit"=>"Create Category"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = 'Lifestyle' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Lifestyle"], ["created_at", "2017-04-19 07:33:45.113091"], ["updated_at", "2017-04-19 07:33:45.113091"]]
+  [1m[36m (159.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 164ms (ActiveRecord: 159.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-04-19 13:03:45 +0530
+Processing by CategoriesController#index as HTML
+  [1m[35mCategory Load (0.5ms)[0m  SELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  Rendered categories/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2017-04-19 13:03:54 +0530
+Processing by CategoriesController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered categories/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2017-04-19 13:03:59 +0530
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MvBb6LkAwaOE7ZCpOsAI2mHteof/rVpHzIe2cNAkjvrWcLJINtiVEuQLxT9JWcuyZ/cJFlCcIgbisJzjBmo5wA==", "category"=>{"name"=>"Lifestyle"}, "commit"=>"Create Category"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCategory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "categories" WHERE "categories"."name" = 'Lifestyle' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered shared/_errors.html.erb (0.6ms)
+  Rendered categories/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 42.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2017-04-19 13:04:04 +0530
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vwsxKGmVgD7XNDkJhWX4Ovo3CHtShit0MWAXK5+RpiFbi9iI5k3Uj7fSbJ/2/DtS/C176v23UzUfVz24Sd8RGw==", "category"=>{"name"=>"Lifestyles"}, "commit"=>"Create Category"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.2ms)[0m  SELECT  1 AS one FROM "categories" WHERE "categories"."name" = 'Lifestyles' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Lifestyles"], ["created_at", "2017-04-19 07:34:04.665955"], ["updated_at", "2017-04-19 07:34:04.665955"]]
+  [1m[35m (189.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 193ms (ActiveRecord: 189.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-04-19 13:04:04 +0530
+Processing by CategoriesController#index as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1mSELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "categories"
+  Rendered categories/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-04-19 13:06:35 +0530
+Processing by CategoriesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0
+  Rendered categories/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories?page=2" for 127.0.0.1 at 2017-04-19 13:06:39 +0530
+Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 5
+  Rendered categories/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories?page=1" for 127.0.0.1 at 2017-04-19 13:06:42 +0530
+Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0
+  Rendered categories/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories?page=2" for 127.0.0.1 at 2017-04-19 13:06:43 +0530
+Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCategory Load (0.2ms)[0m  SELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 5
+  Rendered categories/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 50ms (Views: 48.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2017-04-19 13:08:01 +0530
+Processing by CategoriesController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered categories/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 75ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2017-04-19 13:08:11 +0530
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yEpYpt5rYSpqlNpZLl+c9CCmFOpCVacluvXBoL2vJLgsyrEGUbM1mwpyj89dxl+cJrxne+1k32SUwusza+GTgg==", "category"=>{"name"=>"crickert"}, "commit"=>"Create Category"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCategory Exists (0.2ms)[0m  SELECT  1 AS one FROM "categories" WHERE "categories"."name" = 'crickert' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "crickert"], ["created_at", "2017-04-19 07:38:11.949281"], ["updated_at", "2017-04-19 07:38:11.949281"]]
+  [1m[35m (178.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/categories
+Completed 302 Found in 182ms (ActiveRecord: 178.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2017-04-19 13:08:12 +0530
+Processing by CategoriesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 0
+  Rendered categories/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/categories?page=2" for 127.0.0.1 at 2017-04-19 13:08:14 +0530
+Processing by CategoriesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "categories"[0m
+  [1m[35mCategory Load (0.1ms)[0m  SELECT  "categories".* FROM "categories" LIMIT 5 OFFSET 5
+  Rendered categories/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_navigation.html.erb (0.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.4ms)

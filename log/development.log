@@ -15892,3 +15892,35 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 46ms (Views: 45.6ms | ActiveRecord: 0.0ms)
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/login" for 127.0.0.1 at 2017-04-19 12:01:13 +0530
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-04-19 12:01:19 +0530
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ufE7PWXBjXDZ51kvtgfnQXPCpEaG89WP/WfJHBQc71xdcdKd6hnZwbkBDLnFniQpddjX1ynCrc7TUOOPwlJYZg==", "session"=>{"email"=>"venkatreddy@cgmeetup.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "venkatreddy@cgmeetup.com"]]
+Redirected to http://localhost:3000/users/9
+Completed 302 Found in 86ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/9" for 127.0.0.1 at 2017-04-19 12:01:19 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 9]]
+  [1m[35mArticle Load (0.1ms)[0m  SELECT  "articles".* FROM "articles" WHERE "articles"."user_id" = ? LIMIT 5 OFFSET 0  [["user_id", 9]]
+  Rendered articles/_article.html.erb (0.5ms)
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 48.3ms | ActiveRecord: 1.1ms)
